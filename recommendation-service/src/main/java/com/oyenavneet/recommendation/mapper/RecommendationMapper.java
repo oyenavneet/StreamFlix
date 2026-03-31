@@ -4,6 +4,7 @@ import com.oyenavneet.recommendation.dto.MovieSummary;
 import com.oyenavneet.recommendation.entity.CustomerGenre;
 import com.oyenavneet.recommendation.entity.Movie;
 import com.oyenavneet.streamflix.events.CustomerGenreUpdatedEvent;
+import com.oyenavneet.streamflix.events.MovieAddedEvent;
 
 public class RecommendationMapper {
 
