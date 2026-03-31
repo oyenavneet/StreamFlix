@@ -1,0 +1,11 @@
+com\oyenavneet\customer\CustomerServiceApplication.class
+com\oyenavneet\customer\dto\GenreUpdateRequest.class
+com\oyenavneet\customer\controller\advice\ApplicationExceptionHandler.class
+com\oyenavneet\customer\service\CustomerService.class
+com\oyenavneet\customer\repository\CustomerRepository.class
+com\oyenavneet\customer\exception\CustomerNotFoundException.class
+com\oyenavneet\customer\controller\CustomerController.class
+com\oyenavneet\customer\messaging\CustomerEventPublisher.class
+com\oyenavneet\customer\entity\Customer.class
+com\oyenavneet\customer\dto\CustomerDetails.class
+com\oyenavneet\customer\mapper\CustomerMapper.class

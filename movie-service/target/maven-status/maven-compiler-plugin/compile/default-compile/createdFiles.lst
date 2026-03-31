@@ -1,0 +1,11 @@
+com\oyenavneet\movie\mapper\MovieMapper.class
+com\vinsguru\movie\MovieServiceApplication.class
+com\oyenavneet\movie\entity\Movie.class
+com\oyenavneet\movie\controller\MovieController.class
+com\oyenavneet\movie\service\MovieService.class
+com\oyenavneet\movie\messaging\MovieEventPublisher.class
+com\oyenavneet\movie\controller\advice\ApplicationExceptionHandler.class
+com\oyenavneet\movie\dto\MovieDetails.class
+com\oyenavneet\movie\service\MovieDataInitializer.class
+com\oyenavneet\movie\exception\MovieNotFoundException.class
+com\oyenavneet\movie\repository\MovieRepository.class

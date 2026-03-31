@@ -1,0 +1,16 @@
+S:\my_projects\Java_Projects\Kafka\StreamFlix\recommendation-service\src\main\java\com\oyenavneet\recommendation\controller\RecommendationController.java
+S:\my_projects\Java_Projects\Kafka\StreamFlix\recommendation-service\src\main\java\com\oyenavneet\recommendation\dto\MovieRecommendations.java
+S:\my_projects\Java_Projects\Kafka\StreamFlix\recommendation-service\src\main\java\com\oyenavneet\recommendation\dto\MovieSummary.java
+S:\my_projects\Java_Projects\Kafka\StreamFlix\recommendation-service\src\main\java\com\oyenavneet\recommendation\dto\RecommendationEvents.java
+S:\my_projects\Java_Projects\Kafka\StreamFlix\recommendation-service\src\main\java\com\oyenavneet\recommendation\dto\RecommendationType.java
+S:\my_projects\Java_Projects\Kafka\StreamFlix\recommendation-service\src\main\java\com\oyenavneet\recommendation\entity\CustomerGenre.java
+S:\my_projects\Java_Projects\Kafka\StreamFlix\recommendation-service\src\main\java\com\oyenavneet\recommendation\entity\Movie.java
+S:\my_projects\Java_Projects\Kafka\StreamFlix\recommendation-service\src\main\java\com\oyenavneet\recommendation\mapper\RecommendationMapper.java
+S:\my_projects\Java_Projects\Kafka\StreamFlix\recommendation-service\src\main\java\com\oyenavneet\recommendation\messaging\EventConsumerConfig.java
+S:\my_projects\Java_Projects\Kafka\StreamFlix\recommendation-service\src\main\java\com\oyenavneet\recommendation\RecommendationServiceApplication.java
+S:\my_projects\Java_Projects\Kafka\StreamFlix\recommendation-service\src\main\java\com\oyenavneet\recommendation\repository\CustomerGenreRepository.java
+S:\my_projects\Java_Projects\Kafka\StreamFlix\recommendation-service\src\main\java\com\oyenavneet\recommendation\repository\MovieRepository.java
+S:\my_projects\Java_Projects\Kafka\StreamFlix\recommendation-service\src\main\java\com\oyenavneet\recommendation\service\CustomerService.java
+S:\my_projects\Java_Projects\Kafka\StreamFlix\recommendation-service\src\main\java\com\oyenavneet\recommendation\service\MovieService.java
+S:\my_projects\Java_Projects\Kafka\StreamFlix\recommendation-service\src\main\java\com\oyenavneet\recommendation\service\RecommendationService.java
+S:\my_projects\Java_Projects\Kafka\StreamFlix\recommendation-service\src\main\java\com\oyenavneet\recommendation\service\RecommendationStreamService.java
