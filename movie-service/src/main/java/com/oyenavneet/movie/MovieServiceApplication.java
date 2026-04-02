@@ -1,4 +1,4 @@
-package com.vinsguru.movie;
+package com.oyenavneet.movie;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,12 +1,49 @@
 package com.oyenavneet.recommendation.service;
 
+import com.oyenavneet.recommendation.dto.MovieRecommendations;
+import com.oyenavneet.recommendation.dto.RecommendationEvents;
+import org.springframework.context.event.EventListener;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
-import com.oyenavneet.streamflix.events.CustomerGenreUpdatedEvent;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Sinks;
+import reactor.util.concurrent.Queues;
+
+import java.time.Duration;
+import java.util.List;
+import java.util.Objects;
 
 @Service
 public class RecommendationStreamService {
 
-    public void updateGenre(CustomerGenreUpdatedEvent genreUpdatedEvent){
+    private final Sinks.Many<MovieRecommendations> recommendationsSink = Sinks.many().multicast().onBackpressureBuffer(Queues.SMALL_BUFFER_SIZE);
+    private final Flux<MovieRecommendations> recommendationsFlux = recommendationsSink.asFlux();
+    private final RecommendationService recommendationService;
 
+    public RecommendationStreamService(RecommendationService recommendationService) {
+        this.recommendationService = recommendationService;
+    }
+
+    public Flux<MovieRecommendations> streamRecommendations(Integer customerId) {
+        return this.recommendationsFlux
+                .filter(rec -> Objects.isNull(rec.customerId()) || rec.customerId().equals(customerId));
+    }
+
+
+    @Async
+    @EventListener
+    public void onMovieAdded(RecommendationEvents.NewMovieEvent movieEvent) {
+        var movie = this.recommendationService.findMovie(movieEvent.movieId());
+        var recommendation = MovieRecommendations.newlyAdded(List.of(movie));
+        this.recommendationsSink.emitNext(recommendation, Sinks.EmitFailureHandler.busyLooping(Duration.ofSeconds(1)));
+    }
+
+
+    @Async
+    @EventListener
+    public void onPersonalized(RecommendationEvents.PersonalizedEvent event) {
+        var movies = this.recommendationService.findPersonalized(event.customerId());
+        var recommendation = MovieRecommendations.personalized(event.customerId(), movies);
+        this.recommendationsSink.emitNext(recommendation, Sinks.EmitFailureHandler.busyLooping(Duration.ofSeconds(1)));
     }
 }
